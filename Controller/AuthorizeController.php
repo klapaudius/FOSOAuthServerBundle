@@ -129,7 +129,7 @@ class AuthorizeController
     {
         $user = null;
         if (null !== $token = $this->tokenStorage->getToken()) {
-          $user = $token->getUser();
+            $user = $token->getUser();
         }
 
         if (!$user instanceof UserInterface) {
