@@ -128,7 +128,7 @@ class AuthorizeController
     public function authorizeAction(Request $request): Response
     {
         $user = null;
-        if(null !== $token = $this->tokenStorage->getToken()) {
+        if (null !== $token = $this->tokenStorage->getToken()) {
           $user = $token->getUser();
         }
 
