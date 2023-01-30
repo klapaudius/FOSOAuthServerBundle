@@ -1,11 +1,14 @@
 {
-    "name": "klapaudius/oauth-server-bundle",
+    "name": "gregoryeple/oauth-server-bundle",
     "type": "symfony-bundle",
     "description": "Symfony OAuth Server Bundle",
     "keywords": ["oauth", "oauth2", "server"],
-    "homepage": "https://github.com/klapaudius/FOSOAuthServerBundle",
+    "homepage": "https://github.com/gregoryeple/FOSOAuthServerBundle",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Grégory EPLE"
+        },
         {
             "name": "Klapaudius",
             "email": "klapaudius@gmail.com"
@@ -44,7 +47,7 @@
         "symfony/yaml": "~6.0"
     },
     "support": {
-        "issues": "https://github.com/klapaudius/FOSOAuthServerBundle/issues"
+        "issues": "https://github.com/gregoryeple/FOSOAuthServerBundle/issues"
     },
     "suggest": {
         "doctrine/doctrine-bundle": "*",
