@@ -1,21 +1,20 @@
 FOSOAuthServerBundle
 ====================
 
-#### Branches : 4.0 [![Build Status](https://app.travis-ci.com/klapaudius/FOSOAuthServerBundle.svg?branch=4.0)](https://app.travis-ci.com/klapaudius/FOSOAuthServerBundle.svg?branch=4.0) 3.0 [![Build Status](https://app.travis-ci.com/klapaudius/FOSOAuthServerBundle.svg?branch=3.0)](https://app.travis-ci.com/klapaudius/FOSOAuthServerBundle.svg?branch=3.0)
+#### Branches : 4.0 [![Build Status](https://app.travis-ci.com/gregoryeple/FOSOAuthServerBundle.svg?branch=4.0)](https://app.travis-ci.com/gregoryeple/FOSOAuthServerBundle.svg?branch=4.0) 3.0 [![Build Status](https://app.travis-ci.com/gregoryeple/FOSOAuthServerBundle.svg?branch=3.0)](https://app.travis-ci.com/gregoryeple/FOSOAuthServerBundle.svg?branch=3.0)
 
 
 ## Documentation
- 
+
 The bulk of the documentation is stored in the `Resources/doc/index.md` file in this bundle:
 
-[Read the Documentation for master](https://github.com/klapaudius/FOSOAuthServerBundle/blob/master/Resources/doc/index.md)
+[Read the Documentation for master](https://github.com/gregoryeple/FOSOAuthServerBundle/blob/master/Resources/doc/index.md)
 
 ## Repository history
 
-This repository has been initialy created to remove the deprecated warnings on Symfony 4.2 since several pull requests were not reviewed on FriendsOfSymfony/FOSOAuthServerBundle.
-It is actively maintained and works on Symfony 5 (branch 3.0) and Symfony 6 (branch 4.0).
+This repository has been initialy created to fix an authentication error from [klapaudius/FOSOAuthServerBundle](https://github.com/klapaudius/FOSOAuthServerBundle) when using Symfony 6.
 
-Feel free to PR.
+Works on Symfony 6 (branch 4.0).
 
 ## License
 
@@ -24,15 +23,8 @@ This bundle is under the MIT license. See the complete license in the bundle:
     Resources/meta/LICENSE
 
 
-## TODO
-
-Even if this bundle works perfectly in my professionnal application, I would like to :
-- bring back Travis CI to green
-- make phpunit tests works again
-
-
 ## Credits
 
-- Arnaud Le Blanc, and [all contributors](https://github.com/klapaudius/FOSOAuthServerBundle/contributors)
+- Arnaud Le Blanc, and [all contributors](https://github.com/gregoryeple/FOSOAuthServerBundle/contributors)
 - Inspired by [BazingaOAuthBundle](https://github.com/willdurand/BazingaOAuthServerBundle) and [FOSUserBundle](https://github.com/FriendsOfSymfony/FOSUserBundle)
 - Installation doc adapted from [FOSUserBundle](https://github.com/FriendsOfSymfony/FOSUserBundle) doc.
