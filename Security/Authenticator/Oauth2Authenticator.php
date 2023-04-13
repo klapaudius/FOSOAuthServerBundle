@@ -55,7 +55,7 @@ class Oauth2Authenticator extends AbstractAuthenticator
      */
     public function supports(Request $request): ?bool
     {
-        return $request->headers->has('Authorization');
+        return $request->headers->has('Authorization') && str_starts_with($request->headers->get('Authorization'), 'Bearer ');
     }
 
     /**
