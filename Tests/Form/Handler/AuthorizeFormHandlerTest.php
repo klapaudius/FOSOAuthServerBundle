@@ -56,8 +56,8 @@ class AuthorizeFormHandlerTest extends TestCase
             ->disableOriginalConstructor()
             ->getMock()
         ;
-        $request->query = $this->requestQuery;
-        $request->request = $this->requestRequest;
+//        $request->query = $this->requestQuery;
+//        $request->request = $this->requestRequest;
         $this->request = $request;
         $this->container = $this->getMockBuilder(ContainerInterface::class)
             ->disableOriginalConstructor()
