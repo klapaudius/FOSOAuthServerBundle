@@ -85,7 +85,7 @@ class AuthorizeController
         );
 
         if ($event->isAuthorizedClient()) {
-            $scope = $request->get('scope');
+            $scope = $request->query->get('scope');
 
             return $this->oAuth2Server->finishClientAuthorization(true, $user, $request, $scope);
         }
@@ -144,8 +144,8 @@ class AuthorizeController
 
         $request = $this->getCurrentRequest();
 
-        if (null === $clientId = $request->get('client_id')) {
-            $formData = $request->get($this->authorizeForm->getName(), []);
+        if (null === $clientId = $request->query->get('client_id')) {
+            $formData = $request->request->all($this->authorizeForm->getName());
             $clientId = $formData['client_id'] ?? null;
         }
 
