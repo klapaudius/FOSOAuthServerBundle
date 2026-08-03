@@ -22,7 +22,7 @@
     "require": {
         "php": "^8.0",
         "doctrine/doctrine-bundle": "~2.0|~3.0",
-        "klapaudius/oauth2-php": "~1.10",
+        "klapaudius/oauth2-php": "~2.0",
         "symfony/dependency-injection": "~7.0|~8.0",
         "symfony/form": "~7.0|~8.0",
         "symfony/framework-bundle": "~7.0|~8.0",

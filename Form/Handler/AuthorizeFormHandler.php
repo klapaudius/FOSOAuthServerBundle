@@ -121,6 +121,7 @@ class AuthorizeFormHandler
             'redirect_uri' => $this->form->getData()->redirect_uri,
             'state' => $this->form->getData()->state,
             'scope' => $this->form->getData()->scope,
+            'nonce' => $this->form->getData()->nonce,
         ];
     }
 

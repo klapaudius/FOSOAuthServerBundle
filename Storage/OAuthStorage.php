@@ -171,7 +171,7 @@ class OAuthStorage implements IOAuth2RefreshTokens, IOAuth2GrantUser, IOAuth2Gra
     /**
      * {@inheritdoc}
      */
-    public function createAuthCode($code, IOAuth2Client $client, $data, $redirect_uri, $expires, $scope = null)
+    public function createAuthCode($code, IOAuth2Client $client, $data, $redirect_uri, $expires, $scope = null, $nonce = null)
     {
         if (!$client instanceof ClientInterface) {
             throw new \InvalidArgumentException('Client has to implement the ClientInterface');
@@ -184,6 +184,7 @@ class OAuthStorage implements IOAuth2RefreshTokens, IOAuth2GrantUser, IOAuth2Gra
         $authCode->setRedirectUri($redirect_uri);
         $authCode->setExpiresAt($expires);
         $authCode->setScope($scope);
+        $authCode->setNonce($nonce);
         $this->authCodeManager->updateAuthCode($authCode);
 
         return $authCode;

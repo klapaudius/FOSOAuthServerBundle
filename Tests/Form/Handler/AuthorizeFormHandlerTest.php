@@ -181,9 +181,10 @@ class AuthorizeFormHandlerTest extends TestCase
         $data->redirect_uri = \random_bytes(10);
         $data->state = \random_bytes(10);
         $data->scope = \random_bytes(10);
+        $data->nonce = \random_bytes(10);
 
         $this->form
-            ->expects($this->exactly(5))
+            ->expects($this->exactly(6))
             ->method('getData')
             ->with()
             ->willReturn($data)
@@ -197,6 +198,7 @@ class AuthorizeFormHandlerTest extends TestCase
             'redirect_uri' => $data->redirect_uri,
             'state' => $data->state,
             'scope' => $data->scope,
+            'nonce' => $data->nonce,
         ];
 
         $this->assertNull($method->invoke($this->instance));
@@ -346,7 +348,7 @@ class AuthorizeFormHandlerTest extends TestCase
         ;
 
         $this->form
-            ->expects($this->exactly(5))
+            ->expects($this->exactly(6))
             ->method('getData')
             ->with()
             ->willReturn($formData)
@@ -360,6 +362,7 @@ class AuthorizeFormHandlerTest extends TestCase
             'redirect_uri' => $query->redirect_uri,
             'state' => $query->state,
             'scope' => $query->scope,
+            'nonce' => null,
         ];
 
         $this->assertTrue($this->instance->process());
@@ -390,7 +393,7 @@ class AuthorizeFormHandlerTest extends TestCase
         );
 
         $this->form
-            ->expects($this->exactly(5))
+            ->expects($this->exactly(6))
             ->method('getData')
             ->willReturn($formData)
         ;
@@ -407,6 +410,7 @@ class AuthorizeFormHandlerTest extends TestCase
             'redirect_uri' => 'https://example.com/callback',
             'state' => null,
             'scope' => null,
+            'nonce' => null,
         ], $_GET);
     }
 
@@ -464,7 +468,7 @@ class AuthorizeFormHandlerTest extends TestCase
         ;
 
         $this->form
-            ->expects($this->exactly(5))
+            ->expects($this->exactly(6))
             ->method('getData')
             ->willReturn($formData)
         ;
@@ -483,6 +487,7 @@ class AuthorizeFormHandlerTest extends TestCase
             'redirect_uri' => 'https://example.com/callback',
             'state' => null,
             'scope' => 'read write',
+            'nonce' => null,
         ], $_GET);
     }
 

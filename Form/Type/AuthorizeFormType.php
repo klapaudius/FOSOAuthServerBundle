@@ -32,6 +32,8 @@ class AuthorizeFormType extends AbstractType
         $builder->add('redirect_uri', $hiddenType);
         $builder->add('state', $hiddenType);
         $builder->add('scope', $hiddenType);
+        // OpenID Connect: must survive the consent round-trip to stay bound to the auth code
+        $builder->add('nonce', $hiddenType, ['required' => false]);
     }
 
     /**

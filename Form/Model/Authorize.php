@@ -25,6 +25,7 @@ class Authorize
     public ?string $redirect_uri = null;
     public ?string $state = null;
     public ?string $scope = null;
+    public ?string $nonce = null;
 
     public function __construct(bool $accepted, array $query = [])
     {

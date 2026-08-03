@@ -9,5 +9,7 @@
         <field name="redirectUri" column="redirect_uri" type="text" />
         <field name="expiresAt" column="expires_at" type="integer" nullable="true" />
         <field name="scope" column="scope" type="string" nullable="true" />
+        <field name="nonce" column="nonce" type="string" nullable="true" />
+        <field name="authTime" column="auth_time" type="integer" nullable="true" />
     </mapped-superclass>
 </doctrine-mapping>

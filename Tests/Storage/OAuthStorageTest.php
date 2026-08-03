@@ -471,6 +471,32 @@ class OAuthStorageTest extends TestCase
         $this->assertSame($user, $code->getUser());
         $this->assertSame(1, $code->getExpiresAt());
         $this->assertSame('foo bar', $code->getScope());
+        $this->assertNull($code->getNonce());
+        $this->assertNull($code->getAuthTime());
+    }
+
+    public function testCreateAuthCodeBindsTheOidcNonce(): void
+    {
+        $this->authCodeManager->expects($this->once())
+            ->method('createAuthCode')
+            ->with()
+            ->willReturn(new AuthCode())
+        ;
+        $this->authCodeManager->expects($this->once())
+            ->method('updateAuthCode')
+        ;
+
+        $code = $this->storage->createAuthCode(
+            'foo',
+            new Client(),
+            new User('42'),
+            'http://www.example.com/',
+            1,
+            'openid profile',
+            'n-0S6_WzA2Mj'
+        );
+
+        $this->assertSame('n-0S6_WzA2Mj', $code->getNonce());
     }
 
     public function testGetAuthCodeReturnsAuthCodeWithGivenId(): void

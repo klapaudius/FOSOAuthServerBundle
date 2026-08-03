@@ -20,6 +20,10 @@ class AuthCode extends Token implements AuthCodeInterface
 {
     protected string $redirectUri;
 
+    protected ?string $nonce = null;
+
+    protected ?int $authTime = null;
+
     /**
      * {@inheritdoc}
      */
@@ -34,5 +38,37 @@ class AuthCode extends Token implements AuthCodeInterface
     public function getRedirectUri(): string
     {
         return $this->redirectUri;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setNonce( ?string $nonce )
+    {
+        $this->nonce = $nonce;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getNonce(): ?string
+    {
+        return $this->nonce;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setAuthTime( ?int $authTime )
+    {
+        $this->authTime = $authTime;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAuthTime(): ?int
+    {
+        return $this->authTime;
     }
 }
