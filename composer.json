@@ -36,7 +36,7 @@
         "friendsofphp/php-cs-fixer": "^3.0",
         "php-mock/php-mock-phpunit": "~1.0|~2.0",
         "phpstan/phpstan-phpunit": "^2.0",
-        "phpunit/phpunit": "~12.0",
+        "phpunit/phpunit": "~13.4",
         "symfony/class-loader": "^3.4",
         "symfony/console": "~7.0|~8.0",
         "symfony/phpunit-bridge": "~7.0|~8.0",
